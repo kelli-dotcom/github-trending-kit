@@ -32,7 +32,7 @@
 Great open-source code gets ignored when the README buries what the project does. **GitHub Trending Kit** audits your repo like a skeptical developer who gives every new tab 10 seconds — then patches your README, topics, and launch posts automatically.
 
 - **Best Used For:** Pre-launch repo audits, README overhauls, GitHub discoverability, and concentrated 24-hour Show HN / Reddit / X launches.
-- **Proven in Production:** Powered the READMEs, SEO topics, and launch kits for **[Openflex](https://github.com/kelli-dotcom/openflex)** and **[Feather Themes](https://github.com/kelli-dotcom/feather-themes)**.
+- **Proven in Production:** Powered the READMEs, SEO topics, and launch kits for **Openflex** *(CRTA Proprietary Platform)* and **[Feather Themes](https://github.com/kelli-dotcom/feather-themes)**.
 
 ---
 
@@ -100,7 +100,7 @@ Read the full guide in **[`CONTRIBUTING.md`](CONTRIBUTING.md)** · **[Open an Is
 
 | Repository | What It Does |
 | :--- | :--- |
-| **[openflex](https://github.com/kelli-dotcom/openflex)** | Zero-cost, anti-ghost, Remote-Truth job board (61 verified ATS feeds) |
+| **Openflex** *(CRTA Proprietary Platform)* | Zero-cost, anti-ghost, Remote-Truth job board (61 verified ATS feeds) |
 | **[feather-themes](https://github.com/kelli-dotcom/feather-themes)** | 1,092 photobiology-calibrated, 0-dep WCAG AA/AAA themes for web & apps |
 | **[agent-etiquette](https://github.com/kelli-dotcom/agent-etiquette)** | Multi-agent workflow rules, JSON handoff schemas & Rule of 2 loop caps |
 | **[archetype-agent-vault](https://github.com/kelli-dotcom/archetype-agent-vault)** | 7 character-driven AI coding agent suites (27 specialists) |
