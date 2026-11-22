@@ -1,26 +1,62 @@
-# GitHub Trending Kit
+<h1 align="center">GitHub Trending Kit</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](templates/CONTRIBUTING.md)
-[![CRTA Crafted](https://img.shields.io/badge/CRTA-Crafted-6f42c1.svg)](https://github.com/topics/crta-crafted)
+<p align="center">
+  <strong>Drop-in AI agent and skill kit to turn any repository into a high-converting GitHub landing page.</strong><br />
+  <em>Top-repo README design specs, GitHub SEO topics, and Show HN / Reddit / X launch copy — in one lightweight kit.</em>
+</p>
 
-![GitHub Trending Kit Demo](demo/preview.svg)
+<p align="center">
+  <a href="#-whats-inside"><strong>What's Inside</strong></a> ·
+  <a href="#-quick-start"><strong>Quick Start</strong></a> ·
+  <a href="skills/top-github-readme/SKILL.md"><strong>Top-README Skill</strong></a> ·
+  <a href="templates/CONTRIBUTING.md"><strong>Contributing</strong></a> ·
+  <a href="https://github.com/kelli-dotcom/github-trending-kit/issues"><strong>Issues</strong></a>
+</p>
 
-A lightweight, MIT-licensed agent and skill suite designed to audit any GitHub repository for **5-second star conversion**, **discoverability**, and **launch velocity**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Skills-4_Launch_Skills-10b981?style=for-the-badge" alt="4 Launch Skills" />
+  <img src="https://img.shields.io/badge/Agent-Launch_Director-8b5cf6?style=for-the-badge" alt="Launch Director" />
+  <img src="https://img.shields.io/badge/PRs-Welcome-0ea5e9?style=for-the-badge" alt="PRs Welcome" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" />
+  <img src="https://img.shields.io/badge/CRTA-Crafted-6f42c1?style=for-the-badge" alt="CRTA Crafted" />
+</p>
 
-Drop this into any project before you flip it from Private to Public.
+<p align="center">
+  <img src="demo/preview.svg" alt="GitHub Trending Kit Demo" width="90%" />
+</p>
 
+---
 
-## What's Inside
-* `AGENTS.md` — Root router for launch & growth workflows.
-* `agents/launch-director.md` — Audits your repo like a skeptical Hacker News reader.
-* `skills/github-seo-topics/SKILL.md` — Generates 12–20 GitHub Topics, sub-160-char About description, and 1280x640 Social Preview specs.
-* `skills/readme-conversion-audit/SKILL.md` — Scores `README.md` against the 5-second rule and outputs Markdown patches.
-* `skills/launch-copy-generator/SKILL.md` — Drafts platform-native launch posts for Show HN, Reddit, and X + Tue–Thu 8–10 AM EST launch schedule.
-* `templates/CONTRIBUTING.md` — Ready-to-drop contributor guide to encourage forks and PRs.
-* `templates/.github/ISSUE_TEMPLATE/feature-request.md` — Structured issue template to drive community engagement.
+## ✨ Built for Builders Preparing to Go Public
 
-## Quick Start
+Great open-source code gets ignored when the README buries what the project does. **GitHub Trending Kit** audits your repo like a skeptical developer who gives every new tab 10 seconds — then patches your README, topics, and launch posts automatically.
+
+- **Best Used For:** Pre-launch repo audits, README overhauls, GitHub discoverability, and concentrated 24-hour Show HN / Reddit / X launches.
+- **Proven in Production:** Powered the READMEs, SEO topics, and launch kits for **[Openflex](https://github.com/kelli-dotcom/openflex)** and **[Feather Themes](https://github.com/kelli-dotcom/feather-themes)**.
+
+---
+
+## 📦 What's Inside
+
+| File | Purpose |
+| :--- | :--- |
+| [`AGENTS.md`](AGENTS.md) | Root router for launch & growth workflows |
+| [`agents/launch-director.md`](agents/launch-director.md) | Audits your repo like a skeptical Hacker News reader |
+| [`skills/top-github-readme/SKILL.md`](skills/top-github-readme/SKILL.md) | Researched top-starred README layouts (Product Showcase, Developer SDK, System Map) |
+| [`skills/readme-conversion-audit/SKILL.md`](skills/readme-conversion-audit/SKILL.md) | Scores `README.md` against the 5-second rule and outputs Markdown patches |
+| [`skills/github-seo-topics/SKILL.md`](skills/github-seo-topics/SKILL.md) | Generates 12–20 GitHub Topics, sub-160-char About description & Social Preview specs |
+| [`skills/launch-copy-generator/SKILL.md`](skills/launch-copy-generator/SKILL.md) | Drafts platform-native Show HN, Reddit & X posts + Tue–Thu 8–10 AM EST launch schedule |
+| [`templates/CONTRIBUTING.md`](templates/CONTRIBUTING.md) | Ready-to-drop contributor guide to encourage forks and PRs |
+
+---
+
+## 🚀 Quick Start
+
+Copy `AGENTS.md`, `agents/`, and `skills/` into your repository and prompt your coding agent:
+
+```text
+Run launch-director to audit this repo using skills/top-github-readme/SKILL.md and prepare our launch copy.
+```
 
 <details>
 <summary><strong>Download &amp; Use on Mobile (iOS / Android)</strong></summary>
@@ -29,14 +65,20 @@ Drop this into any project before you flip it from Private to Public.
 
 - **iPhone (iOS):** Tap **Download** → open **Files** → **Downloads** → tap the `.zip` once to unzip.
 - **Android:** Tap **Download** → open **My Files / Files** → **Downloads** → tap the `.zip` and select **Extract**.
-- **Browser Alternative:** Tap **Request Desktop Website** in Safari/Chrome to reveal the green **Code → Download ZIP** button.
-- **Use on Mobile:** Attach any `.md` agent or skill file directly in Gemini, Claude, or ChatGPT (or upload favorites once into a Gemini Gem / Claude Project), or sync via Working Copy / Codespaces / Replit.
+- **Use on Mobile:** Attach any `.md` agent or skill file directly in Gemini, Claude, or ChatGPT.
 
 </details>
 
-Copy `AGENTS.md`, `agents/`, and `skills/` into your repo and run:
-> *"Run `launch-director` to audit this repo for GitHub Trending readiness."*
-
 ---
 
-✨ *Crafted with main-character energy by **CRTA*** • GitHub Topic: `crta-crafted`
+## 🌐 CRTA Tech Solutions Open-Source Ecosystem
+
+| Repository | What It Does |
+| :--- | :--- |
+| **[openflex](https://github.com/kelli-dotcom/openflex)** | Zero-cost, anti-ghost, Remote-Truth job board (61 verified ATS feeds) |
+| **[feather-themes](https://github.com/kelli-dotcom/feather-themes)** | 1,092 photobiology-calibrated, 0-dep WCAG AA/AAA themes for web & apps |
+| **[agent-etiquette](https://github.com/kelli-dotcom/agent-etiquette)** | Multi-agent workflow rules, JSON handoff schemas & Rule of 2 loop caps |
+| **[archetype-agent-vault](https://github.com/kelli-dotcom/archetype-agent-vault)** | 7 character-driven AI coding agent suites (27 specialists) |
+| **[github-trending-kit](https://github.com/kelli-dotcom/github-trending-kit)** | AI agent & skill kit for top-GitHub READMEs, SEO topics & launch copy |
+
+✨ *Crafted with main-character energy by **CRTA Tech Solutions*** • GitHub Topic: `crta-crafted`
