@@ -46,6 +46,7 @@ Great open-source code gets ignored when the README buries what the project does
 | [`skills/readme-conversion-audit/SKILL.md`](skills/readme-conversion-audit/SKILL.md) | Scores `README.md` against the 5-second rule and outputs Markdown patches |
 | [`skills/github-seo-topics/SKILL.md`](skills/github-seo-topics/SKILL.md) | Generates 12–20 GitHub Topics, sub-160-char About description & Social Preview specs |
 | [`skills/launch-copy-generator/SKILL.md`](skills/launch-copy-generator/SKILL.md) | Drafts platform-native Show HN, Reddit & X posts + Tue–Thu 8–10 AM EST launch schedule |
+| [`skills/contribution-setup/SKILL.md`](skills/contribution-setup/SKILL.md) | Authors project-tailored `CONTRIBUTING.md`, README contribution sections & PR templates |
 | [`templates/CONTRIBUTING.md`](templates/CONTRIBUTING.md) | Ready-to-drop contributor guide to encourage forks and PRs |
 
 ---
@@ -68,6 +69,22 @@ Run launch-director to audit this repo using skills/top-github-readme/SKILL.md a
 - **Use on Mobile:** Attach any `.md` agent or skill file directly in Gemini, Claude, or ChatGPT.
 
 </details>
+
+---
+
+## 🤝 Contributing
+
+We welcome new README conversion archetypes, contribution setup patterns, and launch playbooks from both **human open-source maintainers** and **AI agents**:
+
+```bash
+# 1. Fork & create a feature branch
+git checkout -b feat/your-readme-or-launch-skill
+
+# 2. Verify all skills, templates, and root agent entrypoints
+ls -la AGENTS.md HANDOFF.md mistakes.md llms.txt CONTRIBUTING.md skills/*/SKILL.md
+```
+
+Read the full guide in **[`CONTRIBUTING.md`](CONTRIBUTING.md)** · **[Open an Issue](https://github.com/kelli-dotcom/github-trending-kit/issues)** · **[Submit a Pull Request](https://github.com/kelli-dotcom/github-trending-kit/pulls)**
 
 ---
 
