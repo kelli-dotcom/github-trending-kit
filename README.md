@@ -51,16 +51,24 @@ Great open-source code gets ignored when the README buries what the project does
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (PC / Laptop & Mobile)
 
-Copy `AGENTS.md`, `agents/`, and `skills/` into your repository and prompt your coding agent:
+### 💻 1. PC / Laptop Quick Start (Mac, Windows, Linux & Chromebook)
+
+Clone or copy `AGENTS.md`, `agents/`, and `skills/` into your repository and prompt your coding agent:
+
+```bash
+git clone https://github.com/kelli-dotcom/github-trending-kit.git
+```
 
 ```text
 Run launch-director to audit this repo using skills/top-github-readme/SKILL.md and prepare our launch copy.
 ```
 
+### 📱 2. Mobile Quick Start (iPhone, iPad & Android)
+
 <details>
-<summary><strong>Download &amp; Use on Mobile (iOS / Android)</strong></summary>
+<summary><strong>📱 Download &amp; Use on Mobile (iOS / Android)</strong></summary>
 
 **[Download ZIP (Mobile-Friendly)](https://github.com/kelli-dotcom/github-trending-kit/archive/refs/heads/main.zip)**
 
