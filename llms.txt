@@ -1,0 +1,18 @@
+# GitHub Trending Kit
+
+> Launch-ready GitHub README conversion blueprints, `launch-director` agent, templates, and the reusable `top-github-readme` AI skill for turning any repo into a high-converting open-source project.
+
+## Agent Entry Points (All Models)
+- `AGENTS.md` — Universal project guardrails and agent rules.
+- `HANDOFF.md` — Active session state, verification command, and next step.
+- `mistakes.md` — Permanent "Never Repeat" guardrail log.
+- `skills/top-github-readme/SKILL.md` — Reusable AI agent skill for top-1% GitHub READMEs.
+
+## Key Paths
+- `agents/` — `launch-director.md` and release-readiness agents.
+- `skills/` — Model-agnostic `SKILL.md` playbooks.
+- `templates/` — Ready-to-use README, issue, and launch templates.
+- `demo/` — Visual preview assets.
+
+## Verification Command
+`ls -la AGENTS.md HANDOFF.md mistakes.md llms.txt skills/top-github-readme/SKILL.md`
