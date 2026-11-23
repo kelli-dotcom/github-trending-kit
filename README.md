@@ -14,11 +14,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-4_Launch_Skills-10b981?style=for-the-badge" alt="4 Launch Skills" />
-  <img src="https://img.shields.io/badge/Agent-Launch_Director-8b5cf6?style=for-the-badge" alt="Launch Director" />
-  <img src="https://img.shields.io/badge/PRs-Welcome-0ea5e9?style=for-the-badge" alt="PRs Welcome" />
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" />
-  <img src="https://img.shields.io/badge/CRTA-Crafted-6f42c1?style=for-the-badge" alt="CRTA Crafted" />
+  <a href="AGENTS.md"><img src="https://img.shields.io/badge/Skills-4_Launch_Skills-10b981?style=for-the-badge" alt="4 Launch Skills" /></a>
+  <a href="AGENTS.md"><img src="https://img.shields.io/badge/Agent-Launch_Director-8b5cf6?style=for-the-badge" alt="Launch Director" /></a>
+  <a href="#-quick-start-pc--laptop--mobile"><img src="https://img.shields.io/badge/PRs-Welcome-0ea5e9?style=for-the-badge" alt="PRs Welcome" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" /></a>
+  <a href="https://github.com/kelli-dotcom"><img src="https://img.shields.io/badge/CRTA-Crafted-6f42c1?style=for-the-badge" alt="CRTA Crafted" /></a>
 </p>
 
 <p align="center">
