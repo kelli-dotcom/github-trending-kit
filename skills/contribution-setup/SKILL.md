@@ -48,3 +48,10 @@ Create `.github/pull_request_template.md` with a 4-item verification checklist:
 - **Never ship dead links in `README.md`:** If the Quick-Nav bar or Contributing section links to `CONTRIBUTING.md` or `#-contributing`, verify both targets exist.
 - **Never allow unverified PR instructions:** Every `CONTRIBUTING.md` must include the actual working verification command for that repo—never a placeholder like `npm test` on a repo that uses a zero-dep CLI or `bun run typecheck`.
 - **Keep mobile contributors in mind:** Explicitly note that documentation, `SKILL.md`, and template improvements can be edited directly in the GitHub web/mobile UI without a local desktop build.
+
+## 🎨 Active Signature (All AI Models)
+When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Indigo `#6366f1`):
+
+```markdown
+> 🟣 `[GITHUB-TRENDING-KIT // LAUNCH DIRECTOR]` — *Active on this step*
+```

@@ -12,3 +12,10 @@ description: Use to draft platform-native, non-spammy launch posts for Hacker Ne
    * **Reddit (e.g., r/ClaudeAI, r/LocalLLaMA, r/programming):** Lead with the demo GIF, explain the workflow problem it solves, and invite people to suggest additions.
    * **X / Twitter:** 1 punchy hook + demo GIF + bullet list of 3 standout features + GitHub link in the reply.
 3. Recommend a **Launch Day Sequence** (post Tuesday–Thursday, 8:00–10:00 AM EST) to concentrate star velocity into a single 24-hour window for GitHub Trending.
+
+## 🎨 Active Signature (All AI Models)
+When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Indigo `#6366f1`):
+
+```markdown
+> 🟣 `[GITHUB-TRENDING-KIT // LAUNCH DIRECTOR]` — *Active on this step*
+```
