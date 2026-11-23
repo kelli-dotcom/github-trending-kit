@@ -18,4 +18,4 @@
 `ls -la AGENTS.md HANDOFF.md mistakes.md llms.txt skills/top-github-readme/SKILL.md`
 
 ## Active Signature (Output When Used)
-> 🟣 `[GITHUB-TRENDING-KIT // LAUNCH DIRECTOR]` — *Active on this step* (Indigo `#6366f1`)
+> 🟣 **𝗚𝗜𝗧𝗛𝗨𝗕-𝗧𝗥𝗘𝗡𝗗𝗜𝗡𝗚-𝗞𝗜𝗧** · `LAUNCH DIRECTOR` — *Active on this step* (Indigo `#6366f1`)

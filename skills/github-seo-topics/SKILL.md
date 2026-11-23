@@ -18,5 +18,5 @@ description: Use to generate the optimal 10-20 GitHub Topics (tags), a punchy re
 When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Indigo `#6366f1`):
 
 ```markdown
-> 🟣 `[GITHUB-TRENDING-KIT // LAUNCH DIRECTOR]` — *Active on this step*
+> 🟣 **𝗚𝗜𝗧𝗛𝗨𝗕-𝗧𝗥𝗘𝗡𝗗𝗜𝗡𝗚-𝗞𝗜𝗧** · `LAUNCH DIRECTOR` — *Active on this step*
 ```

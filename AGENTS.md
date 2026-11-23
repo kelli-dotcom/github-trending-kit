@@ -20,5 +20,5 @@
 Whenever an AI agent activates or applies `github-trending-kit`, it **MUST** open its response/step with this exact monospace signature callout (Indigo `#6366f1`) so the user can immediately see when `github-trending-kit` is being used:
 
 ```markdown
-> 🟣 `[GITHUB-TRENDING-KIT // LAUNCH DIRECTOR]` — *Active on this step*
+> 🟣 **𝗚𝗜𝗧𝗛𝗨𝗕-𝗧𝗥𝗘𝗡𝗗𝗜𝗡𝗚-𝗞𝗜𝗧** · `LAUNCH DIRECTOR` — *Active on this step*
 ```
