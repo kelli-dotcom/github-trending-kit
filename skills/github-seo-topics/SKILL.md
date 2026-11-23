@@ -15,8 +15,8 @@ description: Use to generate the optimal 10-20 GitHub Topics (tags), a punchy re
 4. Provide a 3-line **Social Preview Image Brief** (1280x640px) to upload under *Settings → General → Social preview*.
 
 ## 🎨 Active Signature (All AI Models)
-When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Indigo `#6366f1`):
+When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Electric Teal `#06b6d4`):
 
 ```markdown
-> 🟣 **𝗚𝗜𝗧𝗛𝗨𝗕-𝗧𝗥𝗘𝗡𝗗𝗜𝗡𝗚-𝗞𝗜𝗧** · `LAUNCH DIRECTOR` — *Active on this step*
+> 🩵 **🄶🄸🅃🄷🅄🄱-🅃🅁🄴🄽🄳🄸🄽🄶-🄺🄸🅃** · `LAUNCH DIRECTOR` — *Active on this step*
 ```
