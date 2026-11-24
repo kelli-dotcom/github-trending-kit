@@ -1,0 +1,21 @@
+{
+  "name": "github-trending-kit",
+  "version": "1.0.0",
+  "description": "Drop-in AI agent and skill kit to audit your README, generate GitHub SEO topics, and draft Show HN, Reddit, and X launch copy.",
+  "type": "module",
+  "main": "scripts/validate-handoff.mjs",
+  "author": "CRTA Tech Solutions",
+  "license": "MIT",
+  "files": [
+    "skills/",
+    "templates/",
+    "agents/",
+    "preview/",
+    "scripts/",
+    "schemas/",
+    "README.md",
+    "CHANGELOG.md",
+    "llms.txt",
+    "LICENSE"
+  ]
+}
