@@ -1,55 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="midnight-slate">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Trending Kit — 10-Second README Archetype Selector Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Trending Kit — Live README &amp; Launch Auditor</title>
+  <link rel="stylesheet" href="https://kelli-dotcom.github.io/feather-themes/themes/themes.css" />
+  <link rel="stylesheet" href="https://kelli-dotcom.github.io/feather-themes/ui/fonts.css" />
+  <link rel="stylesheet" href="https://kelli-dotcom.github.io/feather-themes/ui/buttons.css" />
   <style>
-    :root { --bg:#0b1120; --panel:#111827; --card:#1e293b; --border:#334155; --text:#f8fafc; --muted:#94a3b8; --emerald:#10b981; --cyan:#0ea5e9; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px; }
-    .container { max-width:1060px; margin:0 auto; }
-    .header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:18px; }
-    .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
-    .card { background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:16px; }
-    .card h3 { font-size:15px; color:var(--emerald); margin-bottom:8px; }
-    .step { background:var(--card); border-left:3px solid var(--cyan); padding:8px 10px; border-radius:4px; font-size:12px; margin-bottom:6px; font-family:ui-monospace,monospace; }
+    :root { --kit-teal: #06b6d4; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ft-bg, #0b1220);
+      color: var(--ft-text, #f1f5f9);
+      font-family: var(--ft-font-body, system-ui, -apple-system, sans-serif);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+    header { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .06em; background: rgba(6,182,212,.14); color: #67e8f9; border: 1px solid rgba(6,182,212,.4); }
+    h1 { margin: 8px 0 4px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+    .sub { margin: 0; color: var(--ft-muted, #94a3b8); font-size: 0.96rem; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: var(--ft-surface-solid, #111c2d); border: 1px solid var(--ft-border, rgba(148,163,184,.22)); border-radius: 14px; padding: 18px; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+    label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ft-muted, #94a3b8); display: block; margin-bottom: 6px; }
+    textarea, input, select {
+      width: 100%; border-radius: 10px; padding: 11px 12px;
+      background: var(--ft-bg, #0b1220); color: var(--ft-text, #f1f5f9);
+      border: 1px solid var(--ft-border, rgba(148,163,184,.28));
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px;
+    }
+    textarea { min-height: 290px; resize: vertical; line-height: 1.5; }
+    .score-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+    .score-num { font-size: 2.3rem; font-weight: 800; color: #22d3ee; }
+    .grade { font-weight: 700; padding: 4px 10px; border-radius: 8px; background: rgba(6,182,212,.14); color: #a5f3fc; }
+    .check { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-top: 1px solid rgba(148,163,184,.14); font-size: 14px; }
+    .pass { color: #34d399; font-weight: 700; }
+    .warn { color: #fbbf24; font-weight: 700; }
+    .fail { color: #f87171; font-weight: 700; }
+    .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .pill { font-family: ui-monospace, monospace; font-size: 12px; padding: 4px 9px; border-radius: 999px; background: rgba(6,182,212,.12); border: 1px solid rgba(6,182,212,.35); color: #cffafe; }
+    pre { margin: 8px 0 0; padding: 12px; border-radius: 10px; background: var(--ft-bg, #0b1220); border: 1px solid rgba(148,163,184,.2); white-space: pre-wrap; font-size: 12.5px; color: #e2e8f0; }
+    .btn-mini { cursor: pointer; padding: 6px 11px; border-radius: 8px; border: 1px solid rgba(6,182,212,.45); background: transparent; color: var(--ft-text, #f1f5f9); font-size: 12.5px; font-weight: 600; }
+    .btn-mini:hover { background: rgba(6,182,212,.16); }
+    .meta { margin-top: 20px; font-size: 12.5px; color: var(--ft-muted, #94a3b8); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    a { color: #67e8f9; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
+  <div class="wrap">
+    <header>
       <div>
-        <h1 style="font-size:22px;font-weight:800;">GitHub Trending Kit · Master README Archetype Blueprint</h1>
-        <p style="font-size:13px;color:var(--muted);">10-Second Above-the-Fold Conversion · Mandatory Integrated Visual Demo · IP-Safe 5W+H Clarity Story</p>
+        <span class="badge">GITHUB-TRENDING-KIT · LAUNCH DIRECTOR</span>
+        <h1>Live README &amp; Launch Conversion Auditor</h1>
+        <p class="sub">Paste any repository README to audit first-screen conversion, Uneven U flow, weak prose, SEO topics, and launch openers.</p>
       </div>
-    </div>
+      <div class="row" style="margin:0">
+        <select id="themePick" aria-label="Feather Theme" style="width:auto">
+          <option value="midnight-slate">Feather: Midnight Slate</option>
+          <option value="deep-indigo">Feather: Deep Indigo</option>
+          <option value="paper-light">Feather: Paper Light</option>
+        </select>
+        <a class="btn-mini" href="https://github.com/kelli-dotcom/github-trending-kit" target="_blank" rel="noopener">GitHub Repo →</a>
+      </div>
+    </header>
+
     <div class="grid">
-      <div class="card">
-        <h3>1. Product Showcase (Web Apps)</h3>
-        <div class="step">Hero Banner + Mascot + Centered H1</div>
-        <div class="step">Quick-Nav Bar + Real Trust Shields</div>
-        <div class="step">MANDATORY: Live Animated assets/demo.gif</div>
-        <div class="step">Generic Category Comparison Table</div>
-        <div class="step">60s Quick Start + 1-Cmd Docker</div>
-      </div>
-      <div class="card">
-        <h3>2. Developer SDK (CLIs &amp; Kits)</h3>
-        <div class="step">Centered Title + 1-Sentence Value Prop</div>
-        <div class="step">Instant 1-Command CLI Proof</div>
-        <div class="step">MANDATORY: Live Demo GIF / preview.svg</div>
-        <div class="step">5W+H Clarity Story + Tier/Token Table</div>
-        <div class="step">Copy-Paste ES Module / CLI Snippets</div>
-      </div>
-      <div class="card">
-        <h3>3. System Map (Agent Suites)</h3>
-        <div class="step">Centered Title + Protocol Shields</div>
-        <div class="step">MANDATORY: Visual Workflow Demo</div>
-        <div class="step">Specialist Roster &amp; Guardrail Table</div>
-        <div class="step">1-Command Installer + Mobile ZIP Details</div>
-        <div class="step">CRTA Ecosystem Cross-Link Footer</div>
-      </div>
+      <section class="card">
+        <div class="row" style="justify-content:space-between">
+          <label for="readmeInput" style="margin:0">Repository README.md</label>
+          <div class="row" style="margin:0">
+            <button class="btn-mini" type="button" data-sample="strong">Load Strong Sample</button>
+            <button class="btn-mini" type="button" data-sample="weak">Load Weak Sample</button>
+          </div>
+        </div>
+        <textarea id="readmeInput" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:12px;margin-bottom:0">
+          <div style="flex:1;min-width:180px">
+            <label for="repoName">Repo Name (for Launch Copy)</label>
+            <input id="repoName" value="feather-themes" />
+          </div>
+          <div style="flex:1;min-width:180px">
+            <label for="audience">Primary Audience</label>
+            <input id="audience" value="frontend devs &amp; indie builders" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="score-head">
+          <div>
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ft-muted)">Conversion Score</div>
+            <div class="score-num" id="scoreNum">0/100</div>
+          </div>
+          <span class="grade" id="gradeTag">Ready</span>
+        </div>
+        <div id="checks"></div>
+
+        <div style="margin-top:16px">
+          <label>Suggested GitHub SEO Topics</label>
+          <div class="pills" id="topics"></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="row" style="justify-content:space-between;margin-bottom:4px">
+            <label style="margin:0">Show HN / Launch Opener</label>
+            <button class="btn-mini" type="button" id="copyLaunch">Copy Copy</button>
+          </div>
+          <pre id="launchCopy"></pre>
+        </div>
+      </section>
+    </div>
+
+    <div class="meta">
+      <span>Styled live via <a href="https://kelli-dotcom.github.io/feather-themes/preview/">Feather Themes</a> · Zero build step · &lt; 20 KB Feather Standard</span>
+      <span id="wordMeta"></span>
     </div>
   </div>
+
+  <script>
+    const SAMPLES = {
+      strong: `# Feather Themes\n\n![Feather Themes Hero](assets/hero-banner.svg)\n\nZero-dependency CSS themes (~300B each) grounded in human visual ergonomics.\n\n**Live Demo:** https://kelli-dotcom.github.io/feather-themes/preview/\n\n## Quick Start\n\n\`\`\`html\n<link rel="stylesheet" href="https://kelli-dotcom.github.io/feather-themes/themes/themes.css">\n\`\`\`\n\n## Why It Exists\n\nMost UI libraries ship 120 KB of JavaScript just to toggle dark mode. Feather Themes uses pure CSS custom properties verified for WCAG AA & AAA contrast.\n\n## Contributing & License\n\nMIT License — see [LICENSE](LICENSE).`,
+      weak: `# My Cool Project\n\nThis is a revolutionary, game-changing, next-generation AI-powered synergistic solution that leverages cutting-edge paradigms to seamlessly transform everything.\n\nComing soon! Installation instructions will be added later.`
+    };
+
+    const BUZZWORDS = ['revolutionary','game-changing','next-generation','synergistic','cutting-edge','seamlessly','leverage','paradigm','delve','tapestry','unlock the power'];
+    const TOPIC_RULES = [
+      [/css|theme|color|wcag|ui/i, ['css-themes','design-tokens','accessibility','zero-dependency']],
+      [/agent|llm|ai|prompt|skill/i, ['ai-agents','agent-skills','llm-tools','developer-tools']],
+      [/cli|terminal|bun|node/i, ['cli','developer-experience','open-source','productivity']],
+      [/readme|github|launch|seo/i, ['github-readme','open-source-launch','developer-marketing','mit-license']]
+    ];
+
+    const $ = id => document.getElementById(id);
+    function audit() {
+      const text = $('readmeInput').value;
+      const lines = text.split('\n');
+      const words = (text.trim().match(/\S+/g) || []).length;
+      const hasH1 = /^#\s+\S+/m.test(text);
+      const hasVisual = /!\[[^\]]*\]\([^)]+\)|<img\s/i.test(text);
+      const hasLiveDemo = /https?:\/\/[^\s)]+(github\.io|vercel\.app|netlify\.app|pages\.dev|demo)/i.test(text);
+      const hasCode = /```[\s\S]*?```/.test(text);
+      const hasWhy = /##\s+(why|problem|how|inside|use it|quick start)/i.test(text);
+      const hasLicense = /\b(MIT|Apache-2\.0|GPL|BSD|LICENSE)\b/i.test(text);
+      const foundBuzz = BUZZWORDS.filter(w => new RegExp('\\b' + w.replace(/\s+/g,'\\s+') + '\\b', 'i').test(text));
+
+      const checks = [
+        ['Clear H1 Title & First-Screen Pitch', hasH1 && lines.slice(0, 12).join(' ').length > 40, hasH1 ? 'Found' : 'Missing H1'],
+        ['Brand Visual / Hero Banner Above Fold', hasVisual, hasVisual ? 'Visual found' : 'Add hero SVG/PNG'],
+        ['Real Hosted Live Demo URL', hasLiveDemo, hasLiveDemo ? 'Live URL detected' : 'Add hosted demo'],
+        ['30-Second Quick Start Code Block', hasCode, hasCode ? 'Runnable snippet' : 'Add install/run block'],
+        ['Uneven U Structure (Problem → Proof)', hasWhy, hasWhy ? 'Clear sections' : 'Add Why / Use It'],
+        ['Zero-Fluff Prose (No AI Buzzwords)', foundBuzz.length === 0, foundBuzz.length ? 'Flagged: ' + foundBuzz.slice(0,3).join(', ') : 'Clean prose'],
+        ['License / Contributor Signal', hasLicense, hasLicense ? 'License linked' : 'Add MIT / License']
+      ];
+
+      const weights = [15, 15, 18, 17, 13, 12, 10];
+      const score = checks.reduce((sum, c, i) => sum + (c[1] ? weights[i] : 0), 0);
+      $('scoreNum').textContent = score + '/100';
+      $('gradeTag').textContent = score >= 85 ? 'Launch Ready' : score >= 60 ? 'Needs Polish' : 'High Bounce Risk';
+      $('checks').innerHTML = checks.map(([label, ok, note]) =>
+        `<div class="check"><span>${label}</span><span class="${ok ? 'pass' : 'fail'}">${ok ? '✓ ' : '✗ '}${note}</span></div>`
+      ).join('');
+
+      const topicSet = new Set(['open-source', 'developer-tools']);
+      TOPIC_RULES.forEach(([re, tags]) => { if (re.test(text)) tags.forEach(t => topicSet.add(t)); });
+      $('topics').innerHTML = [...topicSet].slice(0, 8).map(t => `<span class="pill">${t}</span>`).join('');
+
+      const repo = $('repoName').value.trim() || 'this-repo';
+      const aud = $('audience').value.trim() || 'developers';
+      const pitch = (lines.find(l => l.trim() && !l.startsWith('#') && !l.startsWith('!') && !l.startsWith('**Live')) || 'A focused open-source tool built to remove friction.').trim();
+      $('launchCopy').textContent =
+        `Show HN: ${repo} — ${pitch}\n\nBuilt for ${aud}. Zero bloat, works out of the box, MIT licensed.\nTry the live demo and tear it apart — feedback welcome.`;
+      $('wordMeta').textContent = `${words} words · ${foundBuzz.length} buzzword flags`;
+    }
+
+    document.querySelectorAll('[data-sample]').forEach(btn => {
+      btn.addEventListener('click', () => { $('readmeInput').value = SAMPLES[btn.dataset.sample]; audit(); });
+    });
+    ['readmeInput','repoName','audience'].forEach(id => $(id).addEventListener('input', audit));
+    $('themePick').addEventListener('change', e => document.documentElement.setAttribute('data-theme', e.target.value));
+    $('copyLaunch').addEventListener('click', () => {
+      navigator.clipboard?.writeText($('launchCopy').textContent);
+      $('copyLaunch').textContent = 'Copied ✓';
+      setTimeout(() => $('copyLaunch').textContent = 'Copy Copy', 1400);
+    });
+
+    $('readmeInput').value = SAMPLES.strong;
+    audit();
+  </script>
 </body>
 </html>
