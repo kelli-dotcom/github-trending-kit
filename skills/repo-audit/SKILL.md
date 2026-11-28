@@ -1,5 +1,7 @@
 # Repo Audit
 
+Use when before a launch, sale, or published claim.
+
 A repo audit proves a repo does what it says it does. It never trusts the
 repo's own numbers. It measures every claim a second time, from the raw
 files, and reports pass or fail with the exact numbers.
@@ -12,10 +14,7 @@ one audit, one report.
 
 ## The rule
 
-The repo's own audit, its own verify command, and its own README are
-claims, not proof. The auditor recomputes every number from the source
-files with independent code. If the auditor's number and the repo's number
-disagree, the repo's number is wrong until proven otherwise.
+The repo's own audit, verify command, and README are claims, not proof, so the auditor recomputes every number from the source files with independent code, and if the numbers disagree, the repo's number is wrong until proven otherwise.
 
 ## Steps
 
@@ -76,6 +75,18 @@ disagree, the repo's number is wrong until proven otherwise.
   exact numbers.
 - Keep the audit report with the repo. The next audit starts from it.
 - If the audit method itself changes, update this skill first, then re-run it.
+
+## Real cases
+
+- A skill repo was audited from the live tree. The audit counted 45 files
+  and 118,781 bytes, and found the core skill missing, a filled sheet
+  still in the repo, and the README saying nothing was missing on the same
+  page that said files were not there yet. Source: the Human HQ
+  completeness audit.
+- An icon set was audited path by path. 31 icons were compared against
+  four icon libraries. One was byte-identical to another library's icon.
+  15 were too close. 25 were redrawn. Source: the icon audit that rebuilt
+  the set.
 
 ## Budgets this skill uses
 
