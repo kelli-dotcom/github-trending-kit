@@ -5,6 +5,8 @@ description: Behavioral protocol for AI coding agents enforcing zero conversatio
 
 # Agent Etiquette Protocol (`skills/agent-etiquette/SKILL.md`)
 
+Use when an agent starts work or hands off.
+
 ## 1. Zero Conversational Filler
 - No robotic openers (*"Great question!"*, *"Certainly!"*), apologies, or throat-clearing.
 - Lead directly with execution, tool output, or concise results.
@@ -25,6 +27,27 @@ description: Behavioral protocol for AI coding agents enforcing zero conversatio
 - Cap active multi-agent workflows at **3 concurrent specialists**.
 - Load skills and schemas **on demand** (progressive disclosure) instead of pasting full playbooks into every prompt.
 - Pass state between agents exclusively through [`schemas/handoff.json`](../../schemas/handoff.json).
+
+## What it is not
+
+- It is not a personality or a tone. It is a protocol.
+- It does not tell the agent what to build. It tells the agent how to
+  behave while building.
+- It is not optional. It runs on every step.
+
+## Real cases
+
+- A fix failed twice the same way. The agent stopped, reported the exact
+  error and what was tried, and waited, instead of burning tokens in a
+  blind retry loop. Source: a token-shape fix that failed twice with the
+  same error.
+- A number was wrong. The agent owned it in the same turn it landed, said
+  the true number plainly, and never used the wrong number again. Source:
+  a repo count corrected live.
+
+## The rule
+
+No filler, no unverified claim, no third try.
 
 ## 🎨 Active Signature (All AI Models)
 When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Electric Teal `#06b6d4`):
