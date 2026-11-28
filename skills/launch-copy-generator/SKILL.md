@@ -5,6 +5,8 @@ description: Use to draft platform-native, non-spammy launch posts for Hacker Ne
 
 # Launch Copy Generator
 
+Use when a repo is ready to launch.
+
 ## Checklist
 1. Inspect the repo to pull 2–3 concrete technical details (no generic marketing claims).
 2. Draft tailored posts for:
@@ -12,6 +14,28 @@ description: Use to draft platform-native, non-spammy launch posts for Hacker Ne
    * **Reddit (e.g., r/ClaudeAI, r/LocalLLaMA, r/programming):** Lead with the demo GIF, explain the workflow problem it solves, and invite people to suggest additions.
    * **X / Twitter:** 1 punchy hook + demo GIF + bullet list of 3 standout features + GitHub link in the reply.
 3. Recommend a **Launch Day Sequence** (post Tuesday–Thursday, 8:00–10:00 AM EST) to concentrate star velocity into a single 24-hour window for GitHub Trending.
+
+## What it is not
+
+- It is not the launch. It writes the posts.
+- It does not buy stars or fake the demo.
+- It is not spam. One honest post per place.
+
+## What it never does
+
+- It never writes a generic marketing claim.
+- It never posts the same words everywhere.
+- It never launches before the repo is ready.
+
+## Real cases
+
+- The kit shipped with this skill as one of its three growth skills, beside github-seo-topics and readme-conversion-audit. Source: github-trending-kit CHANGELOG, v1.0.0, 2026-11-20.
+- The Launch Director agent runs this skill with the other two, and holds a hard rule: never suggest fake stars, engagement pods, or spammy cross-posting. Source: github-trending-kit agents/launch-director.md.
+- The kit's own public description states the launch offer in one line: audit the README, generate GitHub SEO topics, and draft Show HN, Reddit, and X launch copy. Source: live GitHub repo metadata for kelli-dotcom/github-trending-kit.
+
+## The rule
+
+Real details, one honest post per place, one day.
 
 ## 🎨 Active Signature (All AI Models)
 When any AI model (Claude, Gemini, ChatGPT/Codex, Cursor, Windsurf, Antigravity, Copilot, OpenHands, or local LLMs) runs this skill, open the step with this exact monospace signature callout (Electric Teal `#06b6d4`):
